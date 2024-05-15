@@ -1,0 +1,46 @@
+---
+import HeaderLink from './HeaderLink.astro';
+---
+
+<header class="fixed top-0 left-0 w-[100vw] z-10">
+	<nav class="hidden lg:grid grid-rows-1 grid-cols-2 px-10 py-5" id="header">
+		<div>
+			<p class="text-white header-p font-title"><i>Give flowers, make someone happy</i></p>
+		</div>
+		<div class="flex justify-end gap-10">
+			<HeaderLink href="#services">SERVICES</HeaderLink>
+			<HeaderLink href="#team">TEAM</HeaderLink>
+			<HeaderLink href="#contact">CONTACT</HeaderLink>
+		</div>
+	</nav>
+
+	<div class="grid lg:hidden grid-rows-3">
+		<nav class="grid grid-rows-1 p-5" id="responsiveHeader">
+			<button id="displayMenu">
+				<svg width="50px" height="50px" viewBox="0 -0.5 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M5.5 11.75C5.08579 11.75 4.75 12.0858 4.75 12.5C4.75 12.9142 5.08579 13.25 5.5 13.25V11.75ZM19.5 13.25C19.9142 13.25 20.25 12.9142 20.25 12.5C20.25 12.0858 19.9142 11.75 19.5 11.75V13.25ZM5.5 7.75C5.08579 7.75 4.75 8.08579 4.75 8.5C4.75 8.91421 5.08579 9.25 5.5 9.25V7.75ZM14.833 9.25C15.2472 9.25 15.583 8.91421 15.583 8.5C15.583 8.08579 15.2472 7.75 14.833 7.75V9.25ZM5.5 15.75C5.08579 15.75 4.75 16.0858 4.75 16.5C4.75 16.9142 5.08579 17.25 5.5 17.25V15.75ZM14.833 17.25C15.2472 17.25 15.583 16.9142 15.583 16.5C15.583 16.0858 15.2472 15.75 14.833 15.75V17.25ZM5.5 13.25H19.5V11.75H5.5V13.25ZM5.5 9.25H14.833V7.75H5.5V9.25ZM5.5 17.25H14.833V15.75H5.5V17.25Z" fill="#fff"/>
+				</svg>
+			</button>
+		</nav>
+		<div class="hidden grid-rows-[5%_20%_75%] bg-white absolute w-screen h-screen top-0 z-2 p-5" id="menu">
+			<div class="grid grid-rows-1 items-center grid-cols-[20%]">
+				<button id="hideMenu">
+					<svg width="50px" height="50px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M5.29289 5.29289C5.68342 4.90237 6.31658 4.90237 6.70711 5.29289L12 10.5858L17.2929 5.29289C17.6834 4.90237 18.3166 4.90237 18.7071 5.29289C19.0976 5.68342 19.0976 6.31658 18.7071 6.70711L13.4142 12L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L12 13.4142L6.70711 18.7071C6.31658 19.0976 5.68342 19.0976 5.29289 18.7071C4.90237 18.3166 4.90237 17.6834 5.29289 17.2929L10.5858 12L5.29289 6.70711C4.90237 6.31658 4.90237 5.68342 5.29289 5.29289Z" fill="#000"/>
+					</svg>
+				</button>
+			</div>
+			<div class="grid grid-rows-3 pt-10 gap-10" id="headerLinks">
+				<HeaderLink href="#services">SERVICES</HeaderLink>
+				<HeaderLink href="#team">TEAM</HeaderLink>
+				<HeaderLink href="#contact">CONTACT</HeaderLink>
+			</div>
+	
+			<div class="place-self-center">
+				<div class="bg-green rounded-full h-[250px] w-[250px] flex justify-center items-center">
+					<p class="text-white header-p font-title text-center"><i>Give flowers, <br> make someone happy</i></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

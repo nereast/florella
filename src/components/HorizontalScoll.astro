@@ -1,0 +1,24 @@
+---
+import { getCollection } from 'astro:content';
+
+const services = (await getCollection('services'));
+
+const { border } = Astro.props;
+---
+
+<div class=`max-w-[100vw] relative overflow-hidden scroller ${border}`>
+    <div class="flex flex-nowrap w-max animate-scroll-horizontal">
+        <ul class="grid grid-cols-10 xl:grid-cols-[45vh_15vh_20vh_15vh_40vh_15vh_40vh_15vh_40vh_15vh] grid-rows-1 md:py-4 xl:py-6">
+            {
+                services.map((item) => (
+                    <li class="flex items-center justify-center">
+                        <h4 class="text-green text-center"><i>{item.data.title}</i></h4>
+                    </li>
+                    <li class="flex justify-center items-center">
+                        <img class="w-[100px] h-[50px] rounded-none object-cover" src={`${item.data.heroImage}`}/>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+---
+const { image, title, description } = Astro.props;
+---
+
+<li class="grid grid-rows-[300px] md:grid-rows-1 hover:grid-rows-2 px-8 py-4 group hover:shadow-[inset_0_0_0_99999px_rgba(1,91,77,0.8)] card-container" 
+style={`background: url(${image}); background-position: center; background-size: cover;`}>
+	<img class="hidden" src={`${image}`}/>
+	<p class="text-white font-display hidden group-hover:block">{description}</p>
+	<a class="grid grid-rows-1 grid-cols-[90%_10%] items-end">
+		<h4 class="text-white font-title"><i>{title}</i></h4>
+		<svg class="origin-center rotate-[85deg] block group-hover:hidden" version="1.0" xmlns="http://www.w3.org/2000/svg"
+			width="30px" height="30px" viewBox="0 0 24.000000 24.000000"
+			preserveAspectRatio="xMidYMid meet">
+			<g transform="translate(0.000000,24.000000) scale(0.100000,-0.100000)"
+			fill="#fff" stroke="none">
+			<path d="M30 135 c0 -43 4 -75 10 -75 6 0 10 26 10 57 l0 57 70 -69 c38 -38
+			73 -66 77 -62 4 4 -24 39 -62 77 l-69 70 57 0 c31 0 57 4 57 10 0 6 -32 10
+			-75 10 l-75 0 0 -75z"/>
+			</g>
+		</svg>
+	</a>
+</li>
+	
+

@@ -1,0 +1,8 @@
+---
+const { href, class: className, ...props } = Astro.props;
+---
+
+<a href={href} {...props} class="header-a">
+	<p class="text-green md:text-white md:hover:text-green font-paragraph p-header not-italic"><slot/></p>
+</a>
+
