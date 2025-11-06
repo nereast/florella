@@ -7,6 +7,9 @@ import ServicesCard from '../components/ServicesCard.astro';
 
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
+import bouquete from '../../public/bouquete.svg';
+import flower from '../../public/flower.svg';
+
 import { getCollection } from 'astro:content';
 const services = (await getCollection('services'));
 ---
@@ -34,7 +37,7 @@ const services = (await getCollection('services'));
 					</div>
 					<div class="hidden md:grid grid-cols-[70%_30%]">
 						<div class="bg-pink flex items-center">
-							<img src="../../public/bouquete.svg" class="w-screen md:h-[220px] xl:h-[300px] rotate-90"/>
+							<img src={bouquete.src} class="w-screen md:h-[220px] xl:h-[300px] rotate-90"/>
 						</div>
 						<div class="bg-green"></div>
 					</div>
@@ -95,7 +98,7 @@ const services = (await getCollection('services'));
 						</p>
 					</div>
 					<div class="place-self-end xl:place-self-center">
-						<img src="/public/flower.svg" class="w-screen h-[30vh]"/>
+						<img src={flower.src} class="w-screen h-[30vh]"/>
 					</div>
 				</div>
 				<div class="grid grid-cols-1 grid-rows-[1.5fr_1fr]">
